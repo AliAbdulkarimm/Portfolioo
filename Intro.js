@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             window.location.href = "Startsida.html"; // Byt till din portfolios startsida
         }, 1000); // Matchar övergångstiden i CSS
-    }, 5000); // Vänta 5 sekunder innan övergången startar
+    }, 2000); // Vänta 5 sekunder innan övergången startar
 });

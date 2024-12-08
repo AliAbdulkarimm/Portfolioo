@@ -1,4 +1,4 @@
-/* Grundläggande styling för sidan */
+/* Grundläggande styling för små skärmar */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -35,14 +35,15 @@ header {
     background: linear-gradient(90deg, #0f1c2f, #320a42, #9b10c5, #000000);
     background-size: 400% 400%;
     animation: gradientHeader 8s ease infinite;
-    padding: 20px 20px;
+    padding: 10px 20px; /* Mindre padding för små skärmar */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 header .menu {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column; /* Vertikal layout för små skärmar */
+    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -50,9 +51,10 @@ header .menu {
 header .menu a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 16px; /* Mindre textstorlek för små skärmar */
     font-weight: bold;
     transition: color 0.3s ease;
+    margin: 10px 0; /* Mellanrum mellan länkar */
 }
 
 header .menu a:hover {
@@ -62,28 +64,28 @@ header .menu a:hover {
 /* Hero-sektion */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 50px 20px; /* Mindre padding för små skärmar */
 }
 
 .hero h1 {
-    font-size: 60px;
+    font-size: 40px; /* Mindre textstorlek för små skärmar */
     color: #00f3ff;
     text-shadow: 0 0 20px #00f3ff;
 }
 
 .hero p {
-    font-size: 20px;
-    margin: 20px 0;
+    font-size: 16px; /* Mindre textstorlek för små skärmar */
+    margin: 15px 0;
 }
 
 .hero img {
-    max-width: 500px;
+    max-width: 200px; /* Mindre bildstorlek för små skärmar */
     height: auto;
     border-radius: 50%;
-    border: 5px solid #00f3ff;
-    margin: 20px auto;
+    border: 3px solid #00f3ff;
+    margin: 15px auto;
     display: block;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .hero a {
@@ -91,14 +93,14 @@ header .menu a:hover {
     display: inline-block;
     background-color: #00f3ff;
     color: #121212;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Mindre padding för små skärmar */
     border-radius: 30px;
-    font-size: 18px;
+    font-size: 16px; /* Mindre textstorlek */
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(0, 243, 255, 0.5);
     transition: all 0.3s ease;
     text-align: center;
-    margin: 20px auto;
+    margin: 15px auto;
 }
 
 .hero a:hover {
@@ -111,7 +113,7 @@ header .menu a:hover {
 footer {
     background: #1f1f1f;
     text-align: center;
-    padding: 20px;
+    padding: 10px; /* Mindre padding för små skärmar */
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -119,31 +121,45 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px; /* Mindre textstorlek för små skärmar */
     color: #bbbbbb;
 }
 
-/* Responsiv design för mindre skärmar */
-@media (max-width: 768px) {
+/* Media queries för större skärmar */
+@media (min-width: 768px) {
     header .menu {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row; /* Horisontell layout för större skärmar */
+        justify-content: center;
+    }
+
+    header .menu a {
+        font-size: 18px; /* Större textstorlek */
+        margin: 0 15px; /* Mellanrum mellan länkar */
+    }
+
+    .hero {
+        padding: 100px 20px; /* Mer padding för större skärmar */
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: 60px; /* Större rubrikstorlek */
+    }
+
+    .hero p {
+        font-size: 20px; /* Större textstorlek */
     }
 
     .hero img {
-        max-width: 150px;
+        max-width: 500px; /* Större bildstorlek */
+        border: 5px solid #00f3ff;
     }
 
     .hero a {
-        padding: 8px 16px;
-        font-size: 16px;
+        padding: 10px 20px; /* Mer padding */
+        font-size: 18px; /* Större textstorlek */
     }
 
     footer p {
-        font-size: 12px;
+        font-size: 14px; /* Större textstorlek */
     }
 }

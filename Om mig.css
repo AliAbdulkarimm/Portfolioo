@@ -1,4 +1,4 @@
-/* Grundläggande styling för sidan */
+/* Grundläggande styling för små skärmar */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -33,14 +33,15 @@ header {
     width: 100%;
     background: linear-gradient(90deg, #0f1c2f, #320a42, #9b10c5, #000000);
     animation: gradientHeader 8s ease infinite;
-    padding: 20px 20px;
+    padding: 10px 20px; /* Mindre padding för små skärmar */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 header .menu {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column; /* Vertikal layout för små skärmar */
+    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -48,9 +49,10 @@ header .menu {
 header .menu a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     transition: color 0.3s ease;
+    margin: 10px 0; /* Mellanrum mellan länkar */
 }
 
 header .menu a:hover {
@@ -60,31 +62,31 @@ header .menu a:hover {
 /* Om mig-sektion */
 .om-mig {
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px; /* Mindre padding för små skärmar */
 }
 
 .om-mig img {
-    width: 300px;
-    height: 300px;
+    width: 200px; /* Mindre bild för små skärmar */
+    height: 200px;
     border-radius: 50%;
-    border: 5px solid #00f3ff;
-    margin-bottom: 20px;
+    border: 3px solid #00f3ff;
+    margin-bottom: 15px;
 }
 
 .om-mig h1 {
-    font-size: 40px;
+    font-size: 28px; /* Mindre rubrikstorlek */
     color: #00f3ff;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 /* Kontakta mig-sektion */
 .kontakta-mig {
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px; /* Mindre padding för små skärmar */
     background: linear-gradient(135deg, rgba(3, 12, 44, 0.8), rgba(90, 9, 86, 0.8));
     border-radius: 15px;
     margin: 20px auto;
-    width: 80%;
+    width: 90%; /* Anpassad bredd för små skärmar */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
 }
@@ -92,15 +94,15 @@ header .menu a:hover {
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px; /* Mindre mellanrum mellan kontaktuppgifter */
 }
 
 .contact-item {
     color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Mindre padding */
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid #00f3ff;
@@ -117,7 +119,7 @@ header .menu a:hover {
 footer {
     background: #1f1f1f;
     text-align: center;
-    padding: 20px;
+    padding: 10px; /* Mindre padding för små skärmar */
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -125,5 +127,41 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px; /* Mindre textstorlek */
+}
+
+/* Media queries för större skärmar */
+@media (min-width: 768px) {
+    header .menu {
+        flex-direction: row; /* Horisontell layout för större skärmar */
+        justify-content: center;
+    }
+
+    header .menu a {
+        margin: 0 15px; /* Mellanrum mellan länkar */
+    }
+
+    .om-mig img {
+        width: 300px; /* Större bildstorlek */
+        height: 300px;
+        border: 5px solid #00f3ff;
+    }
+
+    .om-mig h1 {
+        font-size: 40px; /* Större rubrikstorlek */
+    }
+
+    .kontakta-mig {
+        width: 60%; /* Större bredd för större skärmar */
+        padding: 50px 40px; /* Mer padding */
+    }
+
+    .contact-item {
+        font-size: 18px; /* Större textstorlek */
+        padding: 10px 20px; /* Mer padding */
+    }
+
+    footer p {
+        font-size: 14px; /* Större textstorlek */
+    }
 }

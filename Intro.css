@@ -1,11 +1,11 @@
-/* Grundläggande styling */
+/* Grundläggande styling (för små skärmar) */
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #121212; 
+    background-color: #121212;
     overflow: hidden;
-    transition: background-color 1s ease-in-out; 
+    transition: background-color 1s ease-in-out;
 }
 
 /* Bakgrundsvideo styling */
@@ -38,7 +38,7 @@ html, body {
 }
 
 .intro-container h1 {
-    font-size: 40px;
+    font-size: 24px; /* Mindre storlek för små skärmar */
     margin-top: 20px;
     color: #00f3ff;
     text-shadow: 0 0 15px #00f3ff;
@@ -47,11 +47,11 @@ html, body {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 100px; /* Mindre storlek för små skärmar */
+    height: 100px;
     border-radius: 50%;
-    border: 5px solid #00f3ff;
-    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.5);
+    border: 3px solid #00f3ff;
+    box-shadow: 0 5px 15px rgba(0, 243, 255, 0.5);
     animation: scaleIn 2s ease-in-out;
 }
 
@@ -88,4 +88,18 @@ html, body {
 body.fade-out {
     opacity: 0; /* Fade-out på hela sidan */
     transition: opacity 1s ease-in-out;
+}
+
+/* Media queries för större skärmar */
+@media (min-width: 768px) {
+    .intro-container h1 {
+        font-size: 40px; /* Större text för större skärmar */
+    }
+
+    .profile-pic {
+        width: 150px; /* Större bild för större skärmar */
+        height: 150px;
+        border: 5px solid #00f3ff;
+        box-shadow: 0 10px 30px rgba(0, 243, 255, 0.5);
+    }
 }

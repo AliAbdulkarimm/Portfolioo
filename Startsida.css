@@ -1,4 +1,4 @@
-/* Grundläggande styling för små skärmar */
+/* Grundläggande styling (för små skärmar) */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -8,7 +8,6 @@ body {
     font-weight: bold;
 }
 
-/* Bakgrundsvideo */
 .video-background {
     position: fixed;
     top: 0;
@@ -26,7 +25,6 @@ body {
     filter: brightness(0.5);
 }
 
-/* Navigationsmeny */
 header {
     position: sticky;
     top: 0;
@@ -35,14 +33,14 @@ header {
     background: linear-gradient(90deg, #0f1c2f, #320a42, #9b10c5, #000000);
     background-size: 400% 400%;
     animation: gradientHeader 8s ease infinite;
-    padding: 10px 20px; /* Mindre padding för små skärmar */
+    padding: 10px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 header .menu {
     list-style: none;
     display: flex;
-    flex-direction: column; /* Vertikal layout för små skärmar */
+    flex-direction: column;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -51,35 +49,34 @@ header .menu {
 header .menu a {
     text-decoration: none;
     color: white;
-    font-size: 16px; /* Mindre textstorlek för små skärmar */
+    font-size: 16px;
     font-weight: bold;
     transition: color 0.3s ease;
-    margin: 10px 0; /* Mellanrum mellan länkar */
+    margin: 10px 0;
 }
 
 header .menu a:hover {
     color: #00b5ff;
 }
 
-/* Hero-sektion */
 .hero {
     text-align: center;
-    padding: 50px 20px; /* Mindre padding för små skärmar */
+    padding: 50px 20px;
 }
 
 .hero h1 {
-    font-size: 40px; /* Mindre textstorlek för små skärmar */
+    font-size: 40px;
     color: #00f3ff;
     text-shadow: 0 0 20px #00f3ff;
 }
 
 .hero p {
-    font-size: 16px; /* Mindre textstorlek för små skärmar */
+    font-size: 16px;
     margin: 15px 0;
 }
 
 .hero img {
-    max-width: 200px; /* Mindre bildstorlek för små skärmar */
+    max-width: 200px;
     height: auto;
     border-radius: 50%;
     border: 3px solid #00f3ff;
@@ -93,13 +90,12 @@ header .menu a:hover {
     display: inline-block;
     background-color: #00f3ff;
     color: #121212;
-    padding: 8px 16px; /* Mindre padding för små skärmar */
+    padding: 8px 16px;
     border-radius: 30px;
-    font-size: 16px; /* Mindre textstorlek */
+    font-size: 16px;
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(0, 243, 255, 0.5);
     transition: all 0.3s ease;
-    text-align: center;
     margin: 15px auto;
 }
 
@@ -109,11 +105,10 @@ header .menu a:hover {
     transform: translateY(-5px);
 }
 
-/* Footer */
 footer {
     background: #1f1f1f;
     text-align: center;
-    padding: 10px; /* Mindre padding för små skärmar */
+    padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -121,45 +116,44 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: 12px; /* Mindre textstorlek för små skärmar */
+    font-size: 12px;
     color: #bbbbbb;
 }
 
-/* Media queries för större skärmar */
 @media (min-width: 768px) {
     header .menu {
-        flex-direction: row; /* Horisontell layout för större skärmar */
+        flex-direction: row;
         justify-content: center;
     }
 
     header .menu a {
-        font-size: 18px; /* Större textstorlek */
-        margin: 0 15px; /* Mellanrum mellan länkar */
+        font-size: 18px;
+        margin: 0 15px;
     }
 
     .hero {
-        padding: 100px 20px; /* Mer padding för större skärmar */
+        padding: 100px 20px;
     }
 
     .hero h1 {
-        font-size: 60px; /* Större rubrikstorlek */
+        font-size: 60px;
     }
 
     .hero p {
-        font-size: 20px; /* Större textstorlek */
+        font-size: 20px;
     }
 
     .hero img {
-        max-width: 500px; /* Större bildstorlek */
+        max-width: 500px;
         border: 5px solid #00f3ff;
     }
 
     .hero a {
-        padding: 10px 20px; /* Mer padding */
-        font-size: 18px; /* Större textstorlek */
+        padding: 10px 20px;
+        font-size: 18px;
     }
 
     footer p {
-        font-size: 14px; /* Större textstorlek */
+        font-size: 14px;
     }
 }
